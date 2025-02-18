@@ -9,8 +9,10 @@ public record AuthenticationResponse(
   bool Success
   )
 {
-  //Parameterless constructor
-  public AuthenticationResponse() : this(default, default, default, default, default, default)
-  {
-  }
+    //Parameterless constructor  para poder ser usado por el AutoMapper, pero para cumplir
+    //con características de los records se mandan todas las propiedades como default de cada datatype
+    //Es decir usando el primary constructor o invocándolo
+    public AuthenticationResponse() : this(default, default, default, default, default, default)
+    {
+    }
 }
