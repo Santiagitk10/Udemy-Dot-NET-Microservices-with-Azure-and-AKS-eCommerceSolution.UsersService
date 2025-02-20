@@ -24,6 +24,8 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 builder.Services.AddAutoMapper(typeof(ApplicationUserMappingProfile).Assembly);
 
 //FluentValidations
+//Si se usa el método sin AutoValidation se tiene que escribir código para validar
+//si la validación pasó. Se escribiría en el controlador
 builder.Services.AddFluentValidationAutoValidation();
 
 //Add API explorer services
